@@ -22,14 +22,18 @@
 
             <!-- Entrada de Texto -->
             <div class="processo__entrada-de-texto">
-                <textarea class="processo__entrada-de-texto__caixa" id="caixa_texto" name="texto"
+
+                <textarea id="caixa_texto" name="texto"
                     placeholder="Digite seu texto"></textarea>
+
             </div>
 
             <!-- Aviso -->
             <div class="processo__aviso">
+
                 <img src="./assets/icone_aviso.png" alt="icone de aviso">
                 <p>Apenas letras minúsculas e sem acento.</p>
+
             </div>
 
             <!-- Botões -->
@@ -44,27 +48,27 @@
         <!-- Seção Resultado -->
         <section class="resultado">
 
-            <div id="operacao_resultado" class="resultado__operacao">
-                <textarea class="resultado__operacao__texto" name="texto_resultado" id="resultado_processo"
+            <div id="resultado__processo">
+                <textarea name="texto_resultado" id="resultado__processo__texto"
                     readonly></textarea>
 
-                <button onclick="copiar()" class="resultado__operacao__botao-copiar">Copiar</button>
+                <button onclick="copiar()" class="resultado__processo__botao-copiar">Copiar</button>
             </div>
 
-            <div id="container_procura" class="resultado__container">
+            <div id="resultado__procura">
                 <!-- Imagem Procura -->
-                <img class="resultado__imagem" src="./assets/imagem_procura.png"
+                <img src="./assets/imagem_procura.png"
                     alt="Imagem de menino procurando por algo">
 
                 <!-- Textos -->
-                <div class="resultado__texto">
-                    <p class="resultado__texto__titulo">
+                <div class="resultado__procura__texto">
+                    <p class="resultado__procura__texto__titulo">
                         Nenhuma mensagem
                         <br>
                         encontrada
                     </p>
 
-                    <p class="resultado__texto__paragrafo">
+                    <p class="resultado__procura__texto__paragrafo">
                         Digite um texto que você deseja
                         <br>
                         criptografar ou descriptografar.

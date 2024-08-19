@@ -16,7 +16,7 @@ function criptografarTexto() {
     let novo_texto = texto.split('').map(char => criptografar[char] || char).join('');
     console.log(novo_texto);
 
-    document.getElementById('resultado_processo').innerText = novo_texto;
+    document.getElementById('resultado__processo__texto').innerText = novo_texto;
     mostrarResultado()
 }
 
@@ -40,16 +40,16 @@ function descriptografarTexto() {
 
     console.log(novo_texto);
 
-    document.getElementById('resultado_processo').innerText = novo_texto;
+    document.getElementById('resultado__processo__texto').innerText = novo_texto;
 }
 
 function mostrarResultado() {
 
-    document.getElementById('operacao_resultado').style.display = "flex";
-    document.getElementById('container_procura').style.display = "none"
+    document.getElementById('resultado__processo').style.display = "flex";
+    document.getElementById('resultado__procura').style.display = "none"
 }
 
 function copiar() {
-    elemento = document.getElementById('resultado_processo');
+    elemento = document.getElementById('resultado__processo__texto');
     navigator.clipboard.writeText(elemento.value);
 }
