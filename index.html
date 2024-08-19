@@ -22,7 +22,8 @@
 
             <!-- Entrada de Texto -->
             <div class="processo__entrada-de-texto">
-                <textarea class="processo__entrada-de-texto__caixa" name="texto" id="" placeholder="Digite seu texto"></textarea>
+                <textarea class="processo__entrada-de-texto__caixa" id="caixa_texto" name="texto"
+                    placeholder="Digite seu texto"></textarea>
             </div>
 
             <!-- Aviso -->
@@ -33,8 +34,9 @@
 
             <!-- Botões -->
             <div class="processo__botoes">
-                <a class="processo__botoes__criptografia" href="">Criptografia</a>
-                <a class="processo__botoes__descriptografia" href="">Descriptografia</a>
+                <button onclick="criptografarTexto()" class="processo__botoes__criptografia">Criptografia</button>
+                <button onclick="descriptografarTexto()"
+                    class="processo__botoes__descriptografia">Descriptografar</button>
             </div>
 
         </section>
@@ -42,22 +44,32 @@
         <!-- Seção Resultado -->
         <section class="resultado">
 
-            <!-- Imagem Procura -->
-            <img class="resultado__imagem" src="./assets/imagem_procura.png" alt="Imagem de menino procurando por algo">
+            <div id="operacao_resultado" class="resultado__operacao">
+                <textarea class="resultado__operacao__texto" name="texto_resultado" id="resultado_processo"
+                    readonly></textarea>
 
-            <!-- Textos -->
-            <div class="resultado__texto">
-                <p class="resultado__texto__titulo">
-                    Nenhuma mensagem
-                    <br>
-                    encontrada
-                </p>
+                <button onclick="copiar()" class="resultado__operacao__botao-copiar">Copiar</button>
+            </div>
 
-                <p class="resultado__texto__paragrafo">
-                    Digite um texto que você deseja
-                    <br>
-                    criptografar ou descriptografar.
-                </p>
+            <div id="container_procura" class="resultado__container">
+                <!-- Imagem Procura -->
+                <img class="resultado__imagem" src="./assets/imagem_procura.png"
+                    alt="Imagem de menino procurando por algo">
+
+                <!-- Textos -->
+                <div class="resultado__texto">
+                    <p class="resultado__texto__titulo">
+                        Nenhuma mensagem
+                        <br>
+                        encontrada
+                    </p>
+
+                    <p class="resultado__texto__paragrafo">
+                        Digite um texto que você deseja
+                        <br>
+                        criptografar ou descriptografar.
+                    </p>
+                </div>
             </div>
 
         </section>
@@ -68,6 +80,7 @@
         <p>Desenvolvido por Ana Carolina Figueiredo</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
