@@ -14,7 +14,6 @@ function criptografarTexto() {
     };
 
     let novo_texto = texto.split('').map(char => criptografar[char] || char).join('');
-    console.log(novo_texto);
 
     document.getElementById('resultado__processo__texto').innerText = novo_texto;
     mostrarResultado()
@@ -38,9 +37,8 @@ function descriptografarTexto() {
         novo_texto = novo_texto.replace(expressao_criptografada, letra);
     };
 
-    console.log(novo_texto);
-
     document.getElementById('resultado__processo__texto').innerText = novo_texto;
+    mostrarResultado()
 }
 
 function mostrarResultado() {
@@ -52,4 +50,16 @@ function mostrarResultado() {
 function copiar() {
     elemento = document.getElementById('resultado__processo__texto');
     navigator.clipboard.writeText(elemento.value);
+}
+
+if (window.innerWidth <= 1320) {
+    let imagem = document.getElementById('resultado__procura__imagem');
+    imagem.parentNode.removeChild(imagem);
+
+    let titulo = "Nenhuma mensagem encontrada";
+    document.getElementById('titulo__procura__resultado').innerText = titulo;
+
+    let paragrafo = "Digite o texto que você deseja criptografar ou descriptografar";
+    document.getElementById('paragrafo__procura__resultado').innerText = paragrafo;
+
 }

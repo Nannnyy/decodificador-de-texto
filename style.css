@@ -27,7 +27,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    gap: 80px;
+    gap: 5rem;
 
     margin-right: 2%;
     margin-bottom: 3%;
@@ -37,7 +37,7 @@ main {
 
 .processo {
     width: 50%;
-    padding-top: 80px;
+    padding-top: 5rem;
 }
 
 /* Campo de texto */
@@ -63,42 +63,43 @@ main {
 }
 
 #caixa_texto::placeholder {
-    font-family: "Inter", sans-serif;
-    font-size: 32px;
-    font-weight: 400;
     color: var(--dark-blue-300);
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
 }
 
 .processo__aviso {
-    padding-top: 120px;
+    padding-top: 7.5rem;
 
     display: flex;
-    gap: 8px;
+    gap: 0.5rem;
 }
 
 .processo__aviso p {
     font-family: "Inter", sans-serif;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 400;
 
     color: var(--gray-400);
 }
 
 .processo__botoes {
-    margin-top: 16px;
+    margin-top: 1rem;
     display: flex;
-    gap: 24px;
+    gap: 1.5rem;
 
-    align-items: center;
     text-align: center;
 }
 
 .processo__botoes__criptografia {
+    height: 4rem;
+    width: 55%;
+
     background-color: var(--dark-blue-300);
-    padding: 24px 118px;
 
     font-family: "Inter", sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     text-decoration: none;
     color: white;
@@ -108,11 +109,13 @@ main {
 }
 
 .processo__botoes__descriptografia {
+    height: 4rem;
+    width: 52%;
+
     background-color: #D8DFE8;
-    padding: 24px 105px;
 
     font-family: "Inter", sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     text-decoration: none;
     color: var(--dark-blue-300);
@@ -124,7 +127,7 @@ main {
 /* SECTION RESULTADO */
 
 .resultado {
-    
+
     width: 20%;
 
     background-color: white;
@@ -132,10 +135,10 @@ main {
 
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 2rem;
     text-align: center;
-    
-    margin-right: 40px;
+
+    margin-right: 7rem;
     padding: 3%;
 }
 
@@ -145,7 +148,7 @@ main {
     display: none;
     flex-direction: column;
     align-items: center;
-    gap: 22px;
+    gap: 1.5rem;
 }
 
 #resultado__processo__texto {
@@ -154,7 +157,7 @@ main {
 
     background-color: white;
     font-family: "Inter", sans-serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
     color: var(--gray-400);
 
@@ -164,13 +167,15 @@ main {
 }
 
 .resultado__processo__botao-copiar {
+    height: 4rem;
+    width: 67%;
+
     background-color: white;
-    padding: 24px 120px;
 
     text-align: center;
 
     font-family: "Inter", sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     text-decoration: none;
     color: var(--dark-blue-300);
@@ -190,18 +195,18 @@ main {
 .resultado__procura__texto {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
 }
 
 .resultado__procura__texto__titulo {
     font-family: "Inter", sans-serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
 .resultado__procura__texto__paragrafo {
     font-family: "Inter", sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
 }
 
@@ -209,7 +214,7 @@ main {
     background-color: var(--light-blue-300);
 
     font-family: "Inter", sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     color: var(--dark-blue-300);
 
@@ -217,6 +222,61 @@ main {
     justify-content: center;
     text-align: center;
 
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+@media (max-width: 1320px) {
+    main {
+        margin: 0;
+        margin-bottom: 2%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .processo {
+        width: 80%;
+    }
+
+    #caixa_texto {
+        width: 100%;
+    }
+
+    .processo__aviso {
+        padding-top: 4%;
+    }
+
+    .resultado {
+        margin: 0;
+
+        height: 15rem;
+        width: 80%;
+        justify-content: center;
+    }
+
+    #resultado__procura {
+        padding-top: 0;
+    }
+}
+
+@media  (max-width: 400px) {
+
+    main {
+        gap: 3rem;  
+    }
+
+    .processo__botoes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .processo__botoes__criptografia, .processo__botoes__descriptografia {
+        width: 100%;
+    }
 }

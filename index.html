@@ -23,8 +23,7 @@
             <!-- Entrada de Texto -->
             <div class="processo__entrada-de-texto">
 
-                <textarea id="caixa_texto" name="texto"
-                    placeholder="Digite seu texto"></textarea>
+                <textarea id="caixa_texto" name="texto" placeholder="Digite seu texto"></textarea>
 
             </div>
 
@@ -49,26 +48,25 @@
         <section class="resultado">
 
             <div id="resultado__processo">
-                <textarea name="texto_resultado" id="resultado__processo__texto"
-                    readonly></textarea>
+                <textarea name="texto_resultado" id="resultado__processo__texto" readonly></textarea>
 
                 <button onclick="copiar()" class="resultado__processo__botao-copiar">Copiar</button>
             </div>
 
             <div id="resultado__procura">
                 <!-- Imagem Procura -->
-                <img src="./assets/imagem_procura.png"
+                <img id="resultado__procura__imagem" src="./assets/imagem_procura.png"
                     alt="Imagem de menino procurando por algo">
 
                 <!-- Textos -->
                 <div class="resultado__procura__texto">
-                    <p class="resultado__procura__texto__titulo">
+                    <p id="titulo__procura__resultado" class="resultado__procura__texto__titulo">
                         Nenhuma mensagem
                         <br>
                         encontrada
                     </p>
 
-                    <p class="resultado__procura__texto__paragrafo">
+                    <p id="paragrafo__procura__resultado" class="resultado__procura__texto__paragrafo">
                         Digite um texto que você deseja
                         <br>
                         criptografar ou descriptografar.
