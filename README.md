@@ -1,6 +1,6 @@
 # Decodificador de Texto
 
-Esse foi um desafio proposto pelo Curso One da Alura. A proposta foi a criação de uma aplicação web em que fosse possível criptografar e descriptografar o texto desejado pelo usuário. O site também é responsivo para os dispositivos móveis.
+Esse foi um desafio proposto pelo Curso One da Alura. A proposta foi a criação de uma aplicação web para criptografar e descriptografar um texto desejado pelo usuário. O site também é responsivo para os dispositivos móveis.
 
 
 
